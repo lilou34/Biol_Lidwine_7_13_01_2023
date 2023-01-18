@@ -1,0 +1,57 @@
+$primary : #FF6060;
+$secondary : #F6F6F6 ;
+//media queries
+$breakpoints: (
+  tablette: 688px,
+  desktop: 992px,
+);
+@mixin tab {
+  @media screen and (min-width: map-get($breakpoints, tablette)) {
+    @content;
+  }
+}
+@mixin desk {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+@mixin radius {
+  border-radius: 10px;
+}
+
+@mixin flexbox(
+  $display: flex,
+  $direction: row,
+  $placeContent: null,
+  $placeItems: null,
+  $wrap: nowrap,
+  $alignContent: null,
+  $justifyContent: null,
+  $alignItems: null,
+  $justifyItems: null
+) {
+  display: $display;
+  flex-direction: $direction;
+  @if $placeContent == null {
+    @if $alignContent {
+      align-content: $alignContent;
+    }
+    @if $justifyContent {
+      justify-content: $justifyContent;
+    }
+  } @else {
+    place-content: $placeContent;
+  }
+  @if $placeItems == null {
+    @if $alignItems {
+      align-items: $alignItems;
+    }
+    @if $justifyItems {
+      justify-items: $justifyItems;
+    }
+  } @else {
+    place-items: $placeItems;
+  }
+  flex-wrap: $wrap;
+}
+

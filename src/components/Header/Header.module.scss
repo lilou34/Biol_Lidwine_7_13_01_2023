@@ -1,0 +1,46 @@
+@use "../../assets/sass/bases";
+@use "../../assets/sass/var";
+header {
+  @include var.flexbox(
+    $display: flex,
+    $direction: row,
+    $justifyContent: space-between
+  );
+  margin-top: 40px;
+  img {
+    width: 70%;
+  }
+  ul {
+    width: 50%;
+    @include var.flexbox($display: flex, $direction: row);
+    gap: 2%;
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+    li {
+      width: 50%;
+      text-align: right;
+      white-space: nowrap;
+      a {
+        color: var.$primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+        &:active{
+          text-decoration: underline;
+      }
+      }
+    }
+  }
+  @include var.tab {
+    ul li {
+      a {
+        font-size: 24px;
+        text-transform: none;
+      }
+    }
+  }
+}
