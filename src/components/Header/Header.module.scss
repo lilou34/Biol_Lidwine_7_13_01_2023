@@ -1,11 +1,14 @@
-@use "../../assets/sass/bases";
 @use "../../assets/sass/var";
-header {
+
+.header {
   @include var.flexbox(
     $display: flex,
     $direction: row,
     $justifyContent: space-between
   );
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
   img {
     width: 70%;
@@ -14,15 +17,16 @@ header {
     width: 50%;
     @include var.flexbox($display: flex, $direction: row);
     gap: 2%;
-    font-size: 12px;
     font-weight: 500;
     align-items: center;
     li {
       width: 50%;
+      
       text-align: right;
       white-space: nowrap;
       a {
         color: var.$primary;
+        font-size: 12px;
         text-transform: uppercase;
         text-decoration: none;
         &:hover,

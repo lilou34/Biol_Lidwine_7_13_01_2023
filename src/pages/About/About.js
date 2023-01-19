@@ -5,9 +5,9 @@ import image from "../../assets/images/mobApropos.webp"
 
 const About = () => {
   return (
-    <main>
+    <main className={css.main}>
       <Header />
-      <section>
+      <section className={css.section}>
         <img src={image} alt="Paysage" className={css.img} />
       </section>
     </main>

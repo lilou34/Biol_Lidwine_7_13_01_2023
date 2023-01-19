@@ -1,0 +1,17 @@
+@use "../../assets/sass/var";
+
+footer{
+    margin-top: 40px;
+    width: 100%;
+    background-color: black;
+    padding: 40px;
+    @include var.flexbox($display: flex, $direction: column, $alignItems: center);
+    p{
+        color: var.$secondary;
+        font-size: 12px;
+        margin-top: 40px;
+    }
+    @include var.tab {
+        font-size: 24px;
+    }
+}
