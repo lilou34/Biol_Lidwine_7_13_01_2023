@@ -12,7 +12,7 @@ const FicheLogement = () => {
   const { id } = useParams();
   //find cherche dans le tableau celui qui a le meme id et récupérer les infos
 const logement = Data.find((logement) => logement.id === id)
-// décla de variable et assignation de la valeur
+// variable et assignation de la valeur
 // eslint-disable-next-line
 const { title, location, rating, host, equipments, description, pictures } =
 logement;
