@@ -1,0 +1,35 @@
+@use "../../assets/sass/var";
+
+.contain {
+  margin-top: 40px;
+  max-height: 255px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  @include var.radius;
+  overflow: hidden;
+  div .image {
+      min-height: 255px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: normal;
+    }
+  
+  .precedente .flecheGauche {
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+    cursor: pointer;
+  }
+  .suivante .flecheDroite {
+    position: absolute;
+    top: 5rem;
+    right: 0rem;
+    cursor: pointer;
+  }
+  @include var.tab {
+    max-height: 420px;
+  }
+}

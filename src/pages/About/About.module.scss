@@ -2,11 +2,29 @@
 @use "../../assets/sass/bases";
 
 .section {
-  @include var.flexbox($display: flex, $direction: row, $alignItems: center);
-  margin: 4% 0% 8% 0%;
-  img {
+  @include var.flexbox(
+    $display: flex, 
+    $direction: column, 
+    $alignItems: center);
+    width: 95%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  .bannerMobile, .bannerDesktop {
     width: 100%;
     object-fit: cover;
     @include var.radius;
+  }
+  .bannerDesktop{
+    display: none;
+  }
+  @include var.tab {
+    .bannerMobile{
+      display: none;
+    }
+    .bannerDesktop{
+      display: inherit;
+    }
   }
 }

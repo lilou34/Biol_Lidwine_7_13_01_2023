@@ -1,0 +1,27 @@
+@use "../../assets/sass/var";
+.error {
+    text-align: center;
+  color: var.$primary; 
+  .title {
+    font-size: 96px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .return{
+    font-size: 14px;
+    color: var.$primary; 
+  }
+  @include var.tab {
+    .title {
+        font-size: 288px;
+      }
+      p{
+        font-size: 36px;
+      }
+      .return{
+        font-size: 18px;
+        color: var.$primary; 
+      }
+  }
+}
