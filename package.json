@@ -2,22 +2,20 @@
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lilou34.github.io/Biol_Lidwine_7_13_01_2023",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^5.0.1",
     "sass": "^1.57.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build ": "réagir-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +36,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.32.1",
+    
     "prettier": "^2.8.3"
   }
 }

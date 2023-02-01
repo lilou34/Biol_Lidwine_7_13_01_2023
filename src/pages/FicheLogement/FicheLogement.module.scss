@@ -1,9 +1,15 @@
 @use "../../assets/sass/var";
-
+//@use '../../components/Collapse/Collapse.module.scss';
 main {
+
   .corps {
+    font-weight: 500;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    color: var.$primary;
+    h1{
+      font-size: 18px;
+    }
   }
 }

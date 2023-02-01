@@ -1,3 +1,4 @@
+@use "../../assets/sass/var";
 :root {
   font-family: "Montserrat", sans-serif;
   -moz-box-sizing: border-box;
@@ -24,6 +25,8 @@ ul {
 body {
   font-size: 24px;
   font-weight: 500;
+
+
 }
 
 /* Document
@@ -47,6 +50,7 @@ html {
 
 main {
   display: block;
+  
 }
 
 /**

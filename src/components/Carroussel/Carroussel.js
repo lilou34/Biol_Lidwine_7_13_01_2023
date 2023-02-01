@@ -1,14 +1,12 @@
 import React, { useState } from "react"
-
 import css from "./Carroussel.module.scss"
-
 import flecheDroite from "../../assets/images/Droite.webp"
 import flecheGauche from "../../assets/images/Gauche.webp"
 
 const Carroussel = ({ props }) => {
   //state
   const [current, updateCurrent] = useState(0)
-  // va calculer la longueur d'image
+  // va calculer la longueur du tableau
   const longueur = props.length
   // si on arrive a la dernière image on passe sur l'index 0 1ere image sinon on passe à la suivante
   const suivante = () => {
