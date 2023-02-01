@@ -1,6 +1,6 @@
 import React from 'react';
 import css from "./Host.module.scss";
-import Data from "../../logements.json";
+
 
 const Host = ({host}) => {
     return (

@@ -41,7 +41,7 @@ const FicheLogement = () => {
         <h1>{title}</h1>
         <h2>{location}</h2>
         <p></p>
-        <Tag />
+        <Tag tags={tags} />
         <Host host={host} />
         <Rate rate={rating} />
         <article className={css2.list}>

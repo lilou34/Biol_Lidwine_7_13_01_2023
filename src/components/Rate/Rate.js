@@ -3,8 +3,8 @@ import orange from '../../assets/images/etoileOrange.webp';
 import gris from '../../assets/images/etoileGrise.webp';
 import css from './Rate.module.scss';
 
-const Rate = (props) => {
-    const rate = props.rate;
+const Rate = ({rate}) => {
+    
     const stars = [1,2,3,4,5];
 
     return (
