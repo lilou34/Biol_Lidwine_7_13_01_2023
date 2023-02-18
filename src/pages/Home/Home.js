@@ -6,14 +6,14 @@ import Footer from "../../components/Footer/Footer"
 import Card from "../../components/Card/Card"
 const Home = () => {
   return (
-    <main className={css.main}>
-      <section className={css.corps}>
-        <Header />
+    <>
+    <Header />
+      <main className={css.main}>
         <Banner />
         <Card />
-      </section>
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
 

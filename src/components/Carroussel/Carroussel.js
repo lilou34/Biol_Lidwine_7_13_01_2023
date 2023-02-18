@@ -8,7 +8,8 @@ const Carroussel = ({ props }) => {
   const [current, updateCurrent] = useState(0)
   // va calculer la longueur du tableau
   const longueur = props.length
-  // si on arrive a la dernière image on passe sur l'index 0 1ere image sinon on passe à la suivante
+
+  // si on arrive a la dernière image on passe sur la 1ere image sinon on passe à la suivante
   const suivante = () => {
     updateCurrent(current === longueur - 1 ? 0 : current + 1)
   }
@@ -24,13 +25,17 @@ const Carroussel = ({ props }) => {
           <div key={index} className={index === current ? "active" : ""}>
             {index === current && (
               <img src={picture} alt="Logement" className={css.image} />
-            )}
+            )}{" "}
+            
           </div>
         )
       })}
-      {/* affichage bouton si plus d'une photo clic maj state */}
+      {/* affichage compteur et flèches  si plus d'une photo */}
       {longueur > 1 ? (
         <>
+        <p className={css.counter}>
+              {current + 1}/{longueur}
+            </p>
           <div className={css.precedente} onClick={precedente}>
             {/* eslint-disable-next-line */}
             <img

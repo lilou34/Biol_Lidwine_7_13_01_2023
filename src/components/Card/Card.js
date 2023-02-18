@@ -14,10 +14,8 @@ const Card = () => {
             key={logement.id}
             className={css.card}
           >
-            
             <img src={logement.cover} alt={logement.title} />
-              <h2 className={css.title}>{logement.title}</h2>
-            
+            <h2 className={css.title}>{logement.title}</h2>
           </Link>
         )
       })}

@@ -1,5 +1,7 @@
 @use "../../assets/sass/var";
 .error {
+  max-width: 1240px;
+  margin: auto;
     text-align: center;
   color: var.$primary; 
   .title {

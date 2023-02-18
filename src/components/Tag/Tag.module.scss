@@ -1,0 +1,32 @@
+@use "../../assets/sass/var";
+
+.tagContain {
+  @include var.flexbox(
+    $display: flex,
+    $wrap: wrap,
+    $alignItems: center,
+  );
+  
+  min-width: 84px;
+  gap: 1rem;
+  margin: 0.5rem 0rem;
+  .tags {
+    @include var.flexbox(
+    $display: flex,
+    $alignItems: center,
+  );
+    @include var.radius;
+    background-color: var.$primary;
+    height: 18px;
+    width: fit-content;
+    padding: 0.8rem;
+    color: var.$secondary;
+    font-size: 10px;
+    text-align: center;
+    @include var.tab {
+      white-space: nowrap;
+      height: 25px;
+      font-size: 14px;
+    }
+  }
+}

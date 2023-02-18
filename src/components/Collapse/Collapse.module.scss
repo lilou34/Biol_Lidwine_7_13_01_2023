@@ -1,66 +1,36 @@
 @use "../../assets/sass/var";
 
-.list {
-  .collapse {
+.collapse {
+  button {
     @include var.flexbox(
       $display: flex,
-      $direction: column,
-      $justifyContent: center,
+      $justifyContent: space-between,
       $alignItems: center
     );
-    color: var.$secondary;
-    flex-basis: 100%;
-    margin-top: 40px;
-    font-size: 13px;
-    width: 100%;
-
-    .label {
-      z-index: 61;
-      width: 100%;
-    }
-    .toggle {
-      @include var.flexbox(
-        $display: flex,
-        $direction: row,
-        $justifyContent: space-between,
-        $alignItems: center
-      );
-      background-color: var.$primary;
-      border: unset;
-      cursor: pointer;
-      font: unset;
-      padding: 20px;
-      @include var.radius;
-      .fleche {
-        width: 24px;
-        height: 15px;
-      }
-    }
-  }
-
-  .content {
-    background-color: var.$tertiary;
-    @include var.radius;
-    padding-top: 20px;
-    color: var.$primary;
     font-size: 12px;
-    font-weight: 400;
-    padding: 20px;
-  }
-
-  .contentParent {
-    height: 0px;
-    overflow: hidden;
-    transition: height ease 0.3s;
-    z-index: 50;
+    color: var.$tertiary;
     width: 100%;
+    background-color: var.$primary;
+    border: unset;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 5px 5px;
+    @include var.radius;
+
+    .fleche {
+      margin: 0.5rem;
+    }
+  }
+  .description {
+    font-size: 12px;
+    min-height: 5rem;
+    background-color: var.$tertiary;
+    border-radius: 0px 0px 10px 10px;
+    padding: 17px;
   }
   @include var.tab {
-    .collapse {
-      font-size: 24px;
-    }
-    .content {
-      font-size: 24px;
+    button, .description  {
+      font-size: 18px;
     }
   }
 }

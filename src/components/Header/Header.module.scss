@@ -6,6 +6,8 @@
     $direction: row,
     $justifyContent: space-between
   );
+  max-width: 1220px;
+
   width: 96%;
   margin-left: auto;
   margin-right: auto;
@@ -21,7 +23,6 @@
     align-items: center;
     li {
       width: 50%;
-      
       text-align: right;
       white-space: nowrap;
       a {
@@ -31,19 +32,23 @@
         text-decoration: none;
         &:hover,
         &:focus {
-            text-decoration: underline;
-        }
-        &:active{
           text-decoration: underline;
-      }
+        }
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }
   @include var.tab {
-    ul li {
-      a {
-        font-size: 24px;
-        text-transform: none;
+    ul {
+      justify-content: flex-end;
+      li {
+        width: 30%;
+        a {
+          font-size: 24px;
+          text-transform: none;
+        }
       }
     }
   }

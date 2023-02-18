@@ -1,4 +1,1 @@
-@use "../../assets/sass/var";
-
-
-
+// gestion du css par modules scss de sass, on crée pour chaque pages ou composants une page scss module et ça évite de charger entièrement le css à chaque fois, avantage : rapidité du site, on attribute un className={nom de la page module.element} ce qui attribue une class unique, le navigateurcrée une série de chiffre et lettre à la class, ce qui permet de réutiliser le m^me no de class plusieurs fois dans les fichiers donc avantage : moins d'erreur et gain de temps dans le développement.

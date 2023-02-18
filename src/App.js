@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home"
 import FicheLogement from "./pages/FicheLogement/FicheLogement"
 import About from "./pages/About/About"
 import Error from "./pages/Error/Error"
-//import css from './index.scss';
+
 
 function App() {
   return (

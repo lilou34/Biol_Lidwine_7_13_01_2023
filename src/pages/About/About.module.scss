@@ -1,30 +1,39 @@
 @use "../../assets/sass/var";
-@use "../../assets/sass/bases";
 
-.section {
-  @include var.flexbox(
-    $display: flex, 
-    $direction: column, 
-    $alignItems: center);
-    width: 95%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+.main {
+  max-width: 1240px;
+  width: 96%;
   margin-left: auto;
   margin-right: auto;
-  .bannerMobile, .bannerDesktop {
-    width: 100%;
-    object-fit: cover;
-    @include var.radius;
-  }
-  .bannerDesktop{
-    display: none;
-  }
-  @include var.tab {
-    .bannerMobile{
+  color: var.$primary;
+
+  .section {
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    .bannerMobile,
+    .bannerDesktop {
+      width: 100%;
+      object-fit: cover;
+      @include var.radius;
+    }
+    .bannerDesktop {
       display: none;
     }
-    .bannerDesktop{
-      display: inherit;
+  }
+  @include var.tab {
+    max-width: 1220px;
+    .section {
+      img {
+        display: none;
+      }
+      .bannerMobile {
+        display: none;
+      }
+      .bannerDesktop {
+        display: none;
+      }
     }
   }
 }

@@ -1,12 +1,10 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import Carroussel from "../../components/Carroussel/Carroussel"
-//import Collapse from "../../components/Collapse/Collapse"
 import Footer from "../../components/Footer/Footer"
 import Data from "../../logements.json"
 import css from "./FicheLogement.module.scss"
-import css2 from "../../components/Collapse/Collapse.module.scss"
 import Rate from "../../components/Rate/Rate"
 import Collapse from "../../components/Collapse/Collapse"
 import Host from "../../components/Host/Host"
@@ -17,8 +15,12 @@ const FicheLogement = () => {
   const { id } = useParams()
   //find cherche dans le tableau celui qui a le meme id et récupérer les infos
   const logement = Data.find((logement) => logement.id === id)
-  // variable et assignation de la valeur
   
+// si id pas bon redirection 
+if (!logement) {
+  return <Navigate to="/error" />;
+}
+// déclaration variable, assignation de propriété des valeur du fichier json
   const {
     title,
     location,
@@ -31,30 +33,42 @@ const FicheLogement = () => {
     // eslint-disable-next-line
     tags,
   } = logement
-  
 
   return (
-    <main className={css.main}>
-      <section className={css.corps}>
-        <Header />
+    <>
+      <Header />
+      <main className={css.main}>
         <Carroussel props={pictures} />
+        <div className={css.containBig}>
+        <div className={css.contain}>
         <h1>{title}</h1>
         <h2>{location}</h2>
-        <p></p>
         <Tag tags={tags} />
-        <Host host={host} />
-        <Rate rate={rating} />
-        <article className={css2.list}>
-          <Collapse label="Description" className={css.label}>
-            <p className={css2.text}>{description}</p>
-          </Collapse>
-          <Collapse label="Équipements" className={css2.label}>
-            <p className={css2.text}>{equipments}</p>
-          </Collapse>
+</div>
+        <div className={css.container}>
+          <Rate rate={rating} />
+          <Host host={host} />
+        </div>
+        </div>
+        <article className={css.list}>
+          <Collapse
+            name="Description"
+            className={css.description}
+            description={<p>{description}</p>}
+          ></Collapse>
+          <Collapse
+            name="Équipements"
+            className={css.description}
+            description={equipments.map((equipment, index) => (
+            <div className={css.item}key={index}>
+              {equipment}
+            </div>
+          ))}
+          ></Collapse>
         </article>
-      </section>
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
 
