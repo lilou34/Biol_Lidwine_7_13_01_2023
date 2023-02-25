@@ -1,18 +1,15 @@
 import React from "react"
-import Header from "../../components/Header/Header"
 import css from "./Home.module.scss"
 import Banner from "../../components/Banner/Banner"
-import Footer from "../../components/Footer/Footer"
 import Card from "../../components/Card/Card"
+import img from '../../assets/images/desktophome.webp'
 const Home = () => {
   return (
     <>
-    <Header />
       <main className={css.main}>
-        <Banner />
+        <Banner titre={'Chez vous, partout et ailleurs'} image={img}/>
         <Card />
       </main>
-      <Footer />
     </>
   )
 }

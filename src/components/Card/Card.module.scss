@@ -5,23 +5,21 @@
   
   @include var.flexbox(
     $display: flex,
-    $direction: row,
+    $direction: column,
     $wrap: wrap,
     $justifyContent: center
   );
   margin: auto;
   gap: 20px;
   a {
-    overflow: hidden;
     position: relative;
-    background-color: var.$secondary;
-    max-width: 340px;
-    max-height: 340px;
-    @include var.radius;
     img {
-      width: 340px;
-      height: 340px;
+      width: 100%;
+      min-height: 255px;
+      max-height: 255px;
       object-fit: cover;
+      mix-blend-mode: darken;filter: brightness(0.9);
+      @include var.radius;
     }
     h2 {
       position: absolute;
@@ -31,7 +29,8 @@
       padding-left: 10px;
     }
   }
-  @include var.tab {
+  @include var.desk {
+    flex-direction: row;
     background-color: var.$tertiary;
   @include var.radius;
     padding: 40px;
@@ -39,6 +38,8 @@
     
       img {
         max-width: 340px;
+        height: 340px;
+        min-height: 340px;
         max-height: 340px;
       
     }

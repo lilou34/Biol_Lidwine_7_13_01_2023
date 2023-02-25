@@ -1,4 +1,4 @@
-@use "../../assets/sass/var";
+@use "../../../assets/sass/var";
 
 .header {
   @include var.flexbox(
@@ -7,8 +7,7 @@
     $justifyContent: space-between
   );
   max-width: 1220px;
-
-  width: 96%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
@@ -21,23 +20,23 @@
     gap: 2%;
     font-weight: 500;
     align-items: center;
+    
     li {
       width: 50%;
       text-align: right;
       white-space: nowrap;
+      .active {
+        border-bottom: 1px solid var.$primary;
+        padding-bottom: 1px;
+      }
       a {
         color: var.$primary;
         font-size: 12px;
         text-transform: uppercase;
         text-decoration: none;
-        &:hover,
-        &:focus {
-          text-decoration: underline;
-        }
-        &:active {
-          text-decoration: underline;
-        }
+      
       }
+      
     }
   }
   @include var.tab {

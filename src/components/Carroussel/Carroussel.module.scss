@@ -16,6 +16,8 @@
       max-height: 255px;
       width: 100%;
       object-fit: cover;
+      mix-blend-mode: darken;
+      filter: brightness(0.9);
     }
   }
   .counter {
@@ -24,18 +26,19 @@
     position: absolute;
     bottom: 1%;
     right: 50%;
+    font-weight: 900;
+  }
+  .flecheDroite,
+  .flecheGauche {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
   }
   .precedente .flecheGauche {
-    position: absolute;
-    top: 5rem;
     left: 0rem;
-    cursor: pointer;
   }
   .suivante .flecheDroite {
-    position: absolute;
-    top: 5rem;
     right: 0rem;
-    cursor: pointer;
   }
   @include var.tab {
     height: 420px;

@@ -1,32 +1,31 @@
 @use "../../assets/sass/var";
 
-
 .section {
   @include var.flexbox($display: flex, $direction: row, $alignItems: center);
   position: relative;
-
   margin: 4% 0% 8% 0%;
-  h1{
+  h1 {
     position: absolute;
+    z-index: 1;
     color: var.$secondary;
     font-size: 24px;
     margin-left: 5%;
     width: 65%;
   }
   img {
+    mix-blend-mode: darken;filter: brightness(0.7);
     width: 100%;
     object-fit: cover;
-    @include var.radius;
-  }
-  @include var.tab {
-    h1{
+    border-radius: 25px;
+    height: 223px;
+    @include var.tab {
+      h1 {
         text-align: center;
         font-size: 48px;
         width: 100%;
         margin-left: 0%;
-    }
-    img {
-      max-height: 223px;
+      }
+      
     }
   }
 }

@@ -12,28 +12,15 @@
     margin-top: 5%;
     margin-bottom: 5%;
 
-    .bannerMobile,
-    .bannerDesktop {
+    .banner{
       width: 100%;
       object-fit: cover;
       @include var.radius;
     }
-    .bannerDesktop {
-      display: none;
-    }
+    
   }
   @include var.tab {
     max-width: 1220px;
-    .section {
-      img {
-        display: none;
-      }
-      .bannerMobile {
-        display: none;
-      }
-      .bannerDesktop {
-        display: none;
-      }
-    }
+    
   }
 }
