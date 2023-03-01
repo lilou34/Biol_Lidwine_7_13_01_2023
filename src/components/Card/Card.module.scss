@@ -1,8 +1,6 @@
 @use "../../assets/sass/var";
 
-
 .section {
-  
   @include var.flexbox(
     $display: flex,
     $direction: column,
@@ -18,7 +16,11 @@
       min-height: 255px;
       max-height: 255px;
       object-fit: cover;
-      mix-blend-mode: darken;filter: brightness(0.9);
+      mix-blend-mode: darken;
+      filter: brightness(0.9);
+      &:hover{
+        border: 5px solid var.$primary;
+      }
       @include var.radius;
     }
     h2 {
@@ -32,16 +34,15 @@
   @include var.desk {
     flex-direction: row;
     background-color: var.$tertiary;
-  @include var.radius;
+    @include var.radius;
     padding: 40px;
     justify-content: center;
-    
-      img {
-        max-width: 340px;
-        height: 340px;
-        min-height: 340px;
-        max-height: 340px;
-      
+
+    img {
+      max-width: 340px;
+      height: 340px;
+      min-height: 340px;
+      max-height: 340px;
     }
   }
 }

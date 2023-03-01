@@ -6,8 +6,7 @@
     $alignItems: center,
     $justifyContent: flex-end
   );
-
-  .name {
+  .nom {
     font-size: 12px;
     width: 50%;
   }
@@ -15,7 +14,7 @@
     border-radius: 50%;
     width: 32px;
   }
-  @include var.tab{
+  @include var.tab {
     width: 50%;
     .name {
       font-size: 18px;
@@ -23,7 +22,7 @@
       padding-right: 1rem;
     }
     img {
-      width: 60px;
+      width: 64px;
     }
   }
 }

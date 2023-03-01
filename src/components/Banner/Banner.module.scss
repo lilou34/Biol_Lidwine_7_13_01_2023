@@ -1,6 +1,6 @@
 @use "../../assets/sass/var";
 
-.section {
+.contain {
   @include var.flexbox($display: flex, $direction: row, $alignItems: center);
   position: relative;
   margin: 4% 0% 8% 0%;
@@ -12,20 +12,24 @@
     margin-left: 5%;
     width: 65%;
   }
-  img {
-    mix-blend-mode: darken;filter: brightness(0.7);
+  .img {
+    mix-blend-mode: darken;
+    filter: brightness(0.7);
     width: 100%;
     object-fit: cover;
-    border-radius: 25px;
-    height: 223px;
-    @include var.tab {
-      h1 {
-        text-align: center;
-        font-size: 48px;
-        width: 100%;
-        margin-left: 0%;
-      }
-      
+    @include var.radius;
+
+    max-height: 223px;
+  }
+  @include var.tab {
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      width: 100%;
+      margin-left: 0%;
+    }
+    .img {
+      border-radius: 25px;
     }
   }
 }

@@ -3,11 +3,11 @@ import css from "./Carroussel.module.scss"
 import flecheDroite from "../../assets/images/Droite.webp"
 import flecheGauche from "../../assets/images/Gauche.webp"
 
-const Carroussel = ({ props }) => {
+const Carroussel = ({ pictures }) => {
   /** state */
   const [current, updateCurrent] = useState(0)
   /** va calculer la longueur du tableau */
-  const longueur = props.length
+  const longueur = pictures.length
 
   /** si on arrive a la dernière image on passe sur la 1ere image sinon on passe à la suivante */
   const suivante = () => {
@@ -20,7 +20,7 @@ const Carroussel = ({ props }) => {
 
   return (
     <article className={css.contain}>
-      {props.map((picture, index) => {
+      {pictures.map((picture, index) => {
         return (
           <div key={index} className={index === current ? "active" : ""}>
             {index === current && (

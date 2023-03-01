@@ -34,9 +34,9 @@ const FicheLogement = () => {
 
   return (
     <>
-      <main className={css.main}>
-        <Carroussel props={pictures} />
-        <div className={css.containBig}>
+      <section className={css.main}>
+        <Carroussel pictures={pictures} />
+        <article className={css.containBig}>
           <div className={css.contain}>
             <h1>{title}</h1>
             <h2>{location}</h2>
@@ -46,8 +46,8 @@ const FicheLogement = () => {
             <Rate rate={rating} />
             <Host host={host} />
           </div>
-        </div>
-        <article className={css.list}>
+        </article>
+        <div className={css.list}>
           <Collapse
             name="Description"
             className={css.description}
@@ -62,8 +62,8 @@ const FicheLogement = () => {
               </div>
             ))}
           ></Collapse>
-        </article>
-      </main>
+        </div>
+      </section>
     </>
   )
 }

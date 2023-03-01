@@ -6,10 +6,10 @@ import img from '../../assets/images/desktophome.webp'
 const Home = () => {
   return (
     <>
-      <main className={css.main}>
-        <Banner titre={'Chez vous, partout et ailleurs'} image={img}/>
+      <section className={css.main}>
+        <Banner className={css.banner} titre={'Chez vous, partout et ailleurs'} image={img}/>
         <Card />
-      </main>
+      </section>
     </>
   )
 }

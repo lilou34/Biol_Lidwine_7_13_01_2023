@@ -6,7 +6,7 @@ import css from "./Card.module.scss"
 // récupération des data grace au .map et affichage des informations dynamique
 const Card = () => {
   return (
-    <section className={css.section}>
+    <article className={css.section}>
       {Data.map((logement) => {
         return (
           <Link
@@ -19,7 +19,7 @@ const Card = () => {
           </Link>
         )
       })}
-    </section>
+    </article>
   )
 }
 

@@ -6,13 +6,11 @@ import img from '../../assets/images/desktopabout.webp'
 
 const About = () => {
   return (
-    <main className={css.main}>
-      <section className={css.section}>
+    <section className={css.contain}>
+      <article className={css.article}>
       <Banner titre={''} image={img}/>
-        
-        
-      </section>
-      <section className={css.collapseList}>
+      </article>
+      <article className={css.collapseList}>
         <Collapse
           name="Fiabilité"
           description={
@@ -56,8 +54,8 @@ const About = () => {
             </p>
           }
         />
-      </section>
-    </main>
+      </article>
+    </section>
   )
 }
 

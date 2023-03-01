@@ -6,11 +6,18 @@
   max-width: 1240px;
   margin: auto;
   color: var.$primary;
-  h1 {
-    font-size: 18px;
-  }
-  h2 {
-    font-size: 14px;
+  .contain {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    h1 {
+      font-size: 18px;
+      line-height: 1.5rem;
+      
+    }
+    h2 {
+      font-size: 14px;
+    }
   }
   .container {
     @include var.flexbox(
@@ -30,9 +37,10 @@
         $alignItems: center
       );
       .contain {
-        width: 50%;
+        gap: 0.8rem;
         h1 {
           font-size: 36px;
+          margin-bottom: 10px;
         }
         h2 {
           font-size: 18px;
@@ -40,6 +48,7 @@
       }
       .container {
         flex-direction: column-reverse;
+        gap: 2rem;
       }
     }
     .list {
@@ -48,7 +57,9 @@
         $justifyContent: space-between,
         $alignItems: flex-start
       );
-      article{width: 48%;}
+      article {
+        width: 48%;
+      }
     }
   }
 }

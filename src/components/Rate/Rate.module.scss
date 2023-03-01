@@ -9,7 +9,7 @@
     @include var.flexbox(
       $display: flex,
       $direction: row,
-      $justifyContent: flex-end
+      $justifyContent: space-between
     );
     img{
         width: 30px;

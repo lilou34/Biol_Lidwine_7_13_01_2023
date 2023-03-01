@@ -16,7 +16,6 @@
     margin-top: 20px;
     padding: 5px 5px;
     @include var.radius;
-
     .fleche {
       margin: 0.5rem;
     }
@@ -29,7 +28,8 @@
     padding: 17px;
   }
   @include var.tab {
-    button, .description  {
+    button,
+    .description {
       font-size: 18px;
     }
   }

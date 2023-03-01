@@ -1,26 +1,21 @@
 @use "../../assets/sass/var";
 
-.main {
+.contain {
   max-width: 1240px;
   width: 96%;
   margin-left: auto;
   margin-right: auto;
   color: var.$primary;
-
-  .section {
-    
+  .article {
     margin-top: 5%;
     margin-bottom: 5%;
-
-    .banner{
+    .banner {
       width: 100%;
       object-fit: cover;
       @include var.radius;
     }
-    
   }
   @include var.tab {
     max-width: 1220px;
-    
   }
 }

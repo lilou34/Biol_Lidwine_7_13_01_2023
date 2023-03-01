@@ -1,15 +1,14 @@
 @use "../../assets/sass/var";
 
 .contain {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  
   height: 255px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
   @include var.radius;
   overflow: hidden;
-
   div {
     .image {
       min-height: 255px;
@@ -21,24 +20,20 @@
     }
   }
   .counter {
-    z-index: 1;
-    color: var.$secondary;
-    position: absolute;
-    bottom: 1%;
-    right: 50%;
-    font-weight: 900;
+    display: none;
   }
   .flecheDroite,
   .flecheGauche {
     position: absolute;
-    top: 40%;
+    top: 50%;
     cursor: pointer;
+    width: 12px;
   }
   .precedente .flecheGauche {
-    left: 0rem;
+    left: 0.5rem;
   }
   .suivante .flecheDroite {
-    right: 0rem;
+    right: 0.5rem;
   }
   @include var.tab {
     height: 420px;
@@ -50,6 +45,20 @@
         width: 100%;
         object-fit: cover;
       }
+    }
+    .flecheDroite,
+    .flecheGauche {
+      top: 40%;
+      width: 47px;
+    }
+    .counter {
+      display: block;
+      z-index: 1;
+      color: var.$secondary;
+      position: absolute;
+      bottom: 1%;
+      right: 50%;
+      font-weight: 900;
     }
   }
 }

@@ -8,7 +8,7 @@
   );
   
   min-width: 84px;
-  gap: 1rem;
+  gap: .5rem;
   margin: 0.5rem 0rem;
   .tags {
     @include var.flexbox(
